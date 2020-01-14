@@ -19,8 +19,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        adapter = CategoryRecycleAdapter(this,
-            DataService.categories)
+        adapter = CategoryRecycleAdapter(this, DataService.categories) { category ->
+            
+        }
         categoryListView.adapter = adapter
 
         val layoutManager= LinearLayoutManager(this)
