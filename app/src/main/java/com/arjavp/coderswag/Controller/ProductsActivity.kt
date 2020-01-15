@@ -27,6 +27,10 @@ class ProductsActivity : AppCompatActivity() {
         if(orientation== Configuration.ORIENTATION_LANDSCAPE){
             spanCount = 3
         }
+        val screenSize = resources.configuration.screenWidthDp
+        if (screenSize> 720){
+            spanCount = 3
+        }
 
         val layoutManager = GridLayoutManager(this, spanCount)
         productListView.adapter = adapter
